@@ -308,7 +308,7 @@
           }
 
           try {
-            return option.hasOwnProperty('id') ? option.id : sortAndStringify(option);
+            return Date.now()+''+ option.hasOwnProperty('id') ? option.id : sortAndStringify(option);
           } catch (e) {
             const warning = `[vue-select warn]: Could not stringify this option ` +
               `to generate unique key. Please provide'getOptionKey' prop ` +
